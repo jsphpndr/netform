@@ -861,9 +861,13 @@ var bouncer = new Bouncer('[data-validate]', {
 });
 
 document.addEventListener('bouncerFormValid', function () {
-	form = document.querySelector('[data-validate]');
+	let form = document.querySelector('[data-validate]');
 	// HTMLFormElement.prototype.submit.call(form);
-  form.submit();
+  let formData = new FormData(myForm)
+  fetch('/', {
+    method: 'POST',
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString()
+  });
 	// window.location = "/thank-you";
 }, false);
-
