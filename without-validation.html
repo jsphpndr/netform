@@ -28,14 +28,14 @@
     </div>
     <div class="[ form__field ]">
       <label class="[ form__label ]" for="message">Message <span class="red">*</span></label>
-      <textarea class="form__message" id="message" placeholder="Say hello..." autocomplete="off" required></textarea>
+      <textarea class="form__message" id="message" name="message" placeholder="Say hello..." autocomplete="off" required></textarea>
     </div>
     <div class="hidden" aria-hidden="true">
       <label for="email">This field is not for humans.</label>
       <input id="email" type="email" name="email" autocomplete="off">
     </div>
-    <input id="lead-source" type="hidden" value="Abaco Aggregate Website">
-    <input id="lead-url" type="hidden" value="https://abacoaggregates.com">
+    <input id="lead-source" name="lead-source" type="hidden" value="Abaco Aggregate Website">
+    <input id="lead-url" name="lead-url" type="hidden" value="https://abacoaggregates.com">
     <div class="[ form__submit ]">
       <input class="[ btn btn--black btn--solid--lg ]" id="submit" type="submit" name="submit" value="Send">
     </div>
