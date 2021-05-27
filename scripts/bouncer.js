@@ -866,23 +866,27 @@ var bouncer = new Bouncer('[data-validate]', {
 	
   
 	
-HTMLFormElement.prototype.submit.call(form, function () {
-  document.addEventListener('bouncerFormValid', function () {
+
+document.addEventListener('bouncerFormValid', function () {
   
   let form = document.querySelector('[data-validate]');
   let formData = new FormData(form);
 
-  fetch('/', {
-    method: 'POST',
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString()
+  HTMLFormElement.prototype.submit.call(form, function () {
+    
+    fetch('/', {
+      method: 'POST',
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    });
+
+    // window.location = "/thank-you";
+
   });
-
-
-  // window.location = "/thank-you";
+  
 }, false);
 
-});
+
   
 	
 
