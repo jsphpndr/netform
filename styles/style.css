@@ -1,0 +1,12 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  text-transform: uppercase;
+  background-color: blue;
+  color: white;
+  padding: 0.5em 1em;
+  border: 0;
+}
