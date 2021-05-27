@@ -863,7 +863,7 @@ var bouncer = new Bouncer('[data-validate]', {
 document.addEventListener('bouncerFormValid', function () {
 	let form = document.querySelector('[data-validate]');
 	// HTMLFormElement.prototype.submit.call(form);
-  let formData = new FormData(myForm)
+  let formData = new FormData(form)
   fetch('/', {
     method: 'POST',
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
